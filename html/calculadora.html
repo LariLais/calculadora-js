@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="../css/calculadora.css" />
+    <!-- icon -->
+    <link rel="shortcut icon" href="../assets/icon.ico" type="image/x-icon" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- script -->
+    <script src="../js/calculadora.js" defer></script>
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="borda">
+        <div class="results">
+          <div id="previous-operation"></div>
+          <div id="current-operation"></div>
+        </div>
+        <div class="operations">
+          <button class="numbers" value="7">7</button>
+          <button class="numbers" value="8">8</button>
+          <button class="numbers" value="9">9</button>
+          <button class="operation" value="DEL">DEL</button>
+
+          <button class="numbers" value="4">4</button>
+          <button class="numbers" value="5">5</button>
+          <button class="numbers" value="6">6</button>
+          <button class="operation" value="+">+</button>
+
+          <button class="numbers" value="1">1</button>
+          <button class="numbers" value="2">2</button>
+          <button class="numbers" value="3">3</button>
+          <button class="operation" value="-">-</button>
+
+          <button class="numbers" value="0">0</button>
+          <button class="numbers" value=".">.</button>
+          <button class="operation" id="equalBtn" value="=">=</button>
+          <button class="operation" value="*">*</button>
+
+          <button class="operation" id="allClearBtn" value="AC">AC</button>
+          <button class="operation" id="divisionBtn" value="/">/</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

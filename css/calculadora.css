@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arial";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 30%;
+  height: 90%;
+  background-color: rgb(155, 155, 155);
+  box-shadow: 15px -15px 0px 10px rgb(83, 83, 83);
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.borda {
+  width: 95%;
+  height: 95%;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 30px;
+  padding-right: 20px;
+  font-weight: bold;
+  word-break: break-all;
+  line-break: strict;
+}
+
+.results > #previous-operation {
+  font-size: 1.5rem;
+}
+
+.results > #current-operation {
+  font-size: 2.5rem;
+}
+
+.operations {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-radius: 0 0 30px 30px;
+}
+
+#allClearBtn {
+  grid-column: 3 span;
+  border-radius: 15px 15px 0 0;
+  border-radius: 0 0 0px 15px;
+}
+
+.numbers,
+.operation {
+  outline: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.numbers:hover, .operation:hover {
+    background-color: gray;
+}
+
+.operation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#divisionBtn {
+    border-radius: 0 0 30px 0px;
+}
+
+button {
+    color: black;
+}
+
+@media screen and (max-width: 900px) {
+
+  .container {
+      width: 60%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+
+    }
+}
