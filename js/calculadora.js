@@ -17,10 +17,7 @@ class Calculator {
     this.currentOperation = "";
   }
 
-  // add digit to clacualtor screen
   addDigit(digit) {
-    // Check if current operation already has a dot
-
     if (digit === "." && this.currentOperationText.innerText.includes(".")) {
       return;
     }
@@ -28,19 +25,13 @@ class Calculator {
     this.updateScreen();
   }
 
-  // Process all calculator operations
-
   processOperation(operation) {
-    // Check if current is empty
-
     if (this.currentOperationText.innerText === "" && operation !== "C") {
       if (this.previousOperationText.innerText !== "") {
         this.changeOperation(operation);
       }
       return;
     }
-
-    // Get current and previous value
     let operationValue;
     const previous = +this.previousOperationText.innerText.split(" ")[0];
     const current = +this.currentOperationText.innerText;
@@ -76,7 +67,6 @@ class Calculator {
     }
   }
 
-  // Change values of calculator screen
   updateScreen(
     operationValue = null,
     operation = null,
@@ -86,18 +76,14 @@ class Calculator {
     if (operationValue === null) {
       this.currentOperationText.innerText += this.currentOperation;
     } else {
-      // Check if value is zero. if it is just add current value
       if (previous === 0) {
         operationValue = current;
       }
 
-      // add current value to previous
       this.previousOperationText.innerText = `${operationValue} ${operation}`;
       this.currentOperationText.innerText = "";
     }
   }
-
-  // Change math operation
 
   changeOperation(operation) {
     const mathoperations = ["*", "/", "+", "-"];
@@ -110,19 +96,16 @@ class Calculator {
       this.previousOperationText.innerText.slice(0, -1) + operation;
   }
 
-  // Delete the last digit
   processDelOperator() {
-    this.currentOperationText.innerText =
-      this.currentOperationText.innerText.slice(0, -1);
+    this.currentOperationText.innerText = " ";
+    this.currentOperationText.innerText.slice(0, -1);
   }
 
-  // Clear previous and current operation
   processClearAllOperation() {
     this.currentOperationText.innerText = " ";
     this.previousOperationText.innerText = " ";
   }
 
-  // process equal operation
   processEqualOperation() {
     const operation = previousOperationText.innerText.split(" ")[1];
 
